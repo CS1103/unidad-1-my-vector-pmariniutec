@@ -7,15 +7,15 @@
 
 
 struct Point2D {
-    int x = 0;
-    int y = 0;
+  int x = 0;
+  int y = 0;
 
 };
 
 struct Point3D {
-    int x = 0;
-    int y = 0;
-    int z = 0;
+  int x = 0;
+  int y = 0;
+  int z = 0;
 };
 
 #endif //MYVECTOR_GEOMETRY_H

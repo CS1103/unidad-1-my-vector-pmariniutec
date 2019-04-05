@@ -5,19 +5,38 @@
 #ifndef MYVECTOR_MYVECTOR_H
 #define MYVECTOR_MYVECTOR_H
 
-class vector {
-    int* _arr;
-    int _size;
+#include <memory>
+#include <iostream>
+#include <cstddef>
+#include <algorithm>
 
-public:
-    vector();
-    ~vector();
-    void push_back(const int& value);
-    void pop_back();
-    void insert(int pos, const int& value);
-    int get_item(int i);
-    int size();
-};
+namespace UTEC {
+  class vector {
 
+	public:
+	  vector();
+	  vector(int initSize);
+	  vector(const vector &original);
+	  ~vector();
+
+	  void push_back(int value);
+	  void pop_back();
+	  void insert(int position, int value); 
+	  int get_item(int position);  
+
+	  int size();
+	  void resize(int newSize);
+
+	  int &operator[](int index);
+	  bool operator==(vector);
+	  bool operator!=(vector);
+
+	private:
+	  int elements;  
+	  int maxSize;
+	  int *array;
+
+  };
+}
 
 #endif //MYVECTOR_MYVECTOR_H
